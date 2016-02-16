@@ -22,7 +22,7 @@
 #include <pthread.h>
 #include <time.h>
 
-#define NUM_THREADS 64
+#define NUM_THREADS 2
 #define SIZE 100000000
 #define UCHAR_MAX 255
 
@@ -67,12 +67,13 @@ int main(int argc, char const *argv[]){
 	
 	
 	long i=0;
+	
 	for(i=0;i<SIZE;i++){
 		array[i]=rand()%(UCHAR_MAX+1); // o to UCHAR_MAX range
 		//printf("%d ",array[i]);
 	}
 	//puts("");
-
+	
 
 	// initialize mutex
 	//pthread_mutex_init(&minMutex, NULL);
@@ -83,12 +84,20 @@ int main(int argc, char const *argv[]){
 	// calculate the execution time
 	clock_t t;
     t = clock();
+
+    struct timeval start, end;
+    gettimeofday(&start, NULL);
 	for (i = 0; i < NUM_THREADS; ++i)
 	{
 		arguments[i]=i;
 		pthread_create(&threads[i],NULL,findMin,(void*)&arguments[i]);
-		pthread_join(threads[i],NULL);
+		//pthread_join(threads[i],NULL);
 	}
+
+	for (i=0;i<NUM_THREADS;++i){
+        pthread_join(threads[i],NULL);
+    }
+
 	// calculate mins form the individual thread  mins
 	int min = 5000;
 	for (i = 0; i < NUM_THREADS; ++i)
@@ -96,12 +105,11 @@ int main(int argc, char const *argv[]){
 		if(candidateMins[i]<min)
 			min=candidateMins[i];
 	}
-	t = clock() - t;
-    double time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
-
-	printf("min is %d\n",min);
-	printf("time taken with %d threads: %f\n",NUM_THREADS,time_taken);
 	
+	printf("min is %d\n",min);
+	gettimeofday(&end, NULL);
+    printf("Microseconds: %ld for %d threads\n", ((end.tv_sec * 1000000 + end.tv_usec)- (start.tv_sec * 1000000 + start.tv_usec)),NUM_THREADS);
+
 
 	
 	return 0;
