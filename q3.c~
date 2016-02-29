@@ -10,7 +10,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
-#include <sys/time.h>
+#include <time.h>
+//#define NUM_THREADS 5
 #define SIZE 100000000
 #define ALPHABET_SIZE 26
 #define NO_OF_VOWELS 5
@@ -116,13 +117,13 @@ int main(int argc, char const *argv[]){
 
         gettimeofday(&end, NULL);
         printf("Microseconds: %ld for %d threads\n", ((end.tv_sec * 1000000 + end.tv_usec)- (start.tv_sec * 1000000 + start.tv_usec)),NUM_THREADS);
-        /*
+	/*
         printf("a: %ld\n",counts['a']);
         printf("e: %ld\n",counts['e']);
         printf("i: %ld\n",counts['i']);
         printf("o: %ld\n",counts['o']);
         printf("u: %ld\n",counts['u']);
-        */
+	*/
         return 0;
 }
 
