@@ -11,5 +11,5 @@ do
 	wait $PID
 done
 
-delete="rm minimum"
+delete="rm vowel"
 eval $delete
