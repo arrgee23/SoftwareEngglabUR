@@ -1,5 +1,5 @@
 /**
-        Rahul Gautam, Aniruddha Mukherjee, Souradip Roy 16/02/2016
+        Rahul Gautam(59), Aniruddha Mukherjee(56), Souradip Roy(54) 24/02/2016
         Software engineering Sec 1 
         zip permutation
         compilation: g++ 2.cpp -lpthread

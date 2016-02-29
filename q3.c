@@ -1,5 +1,5 @@
 /**
-        Rahul Gautam, Aniruddha Mukherjee, Souradip Roy 16/02/2016
+        Rahul Gautam(59), Aniruddha Mukherjee(56), Souradip Roy(54) 20/02/2016
         Software engineering Sec 1 
         Finding count of vowels from a very large array using threads
         compilation: gcc vowelcount.c -lpthread
@@ -58,8 +58,8 @@ void *countVowel(void* c){
 
 int main(int argc, char const *argv[]){
         int NUM_THREADS;
-        scanf("%d",&NUM_THREADS);
-
+        //scanf("%d",&NUM_THREADS);
+		NUM_THREADS = atoi (argv[1]);
         
 
         // initialize counts array 

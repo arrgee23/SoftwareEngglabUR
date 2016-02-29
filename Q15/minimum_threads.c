@@ -2,8 +2,8 @@
 	DESCRIPTION: This finds the minimum value in an 
 	unsigned array of integers using pthreads in C.
 	The integers are randomly defined.
-	AUTHOR: Souradip Roy
-	ROLL NO: 54
+	AUTHORS: Rahul Gautam(59), Aniruddha Mukherjee(56), Souradip Roy(54)
+	
 **************************************************/
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,5 +1,5 @@
 /**
-	Rahul Gautam, Aniruddha Mukherjee, Souradip Roy 09/02/2016
+	Rahul Gautam(59), Aniruddha Mukherjee(56), Souradip Roy(54) 09/02/2016
 	Software engineering Sec 1 problem 1
 	Finding minimum of a very large array using threads
 
@@ -8,15 +8,6 @@
 	change the number of threads by changing the global  variable NUM_THREADS on line 25
 */
 
-/**
-	Size: 100000000
-	time taken with 5 threads: 0.317896
-	time taken with 10 threads: 0.407415
-	time taken with 100 threads: 1.032361
-
-	Size: 1000000000
-
-*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>

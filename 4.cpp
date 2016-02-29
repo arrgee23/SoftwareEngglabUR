@@ -1,5 +1,5 @@
 /**
-        Rahul Gautam, Aniruddha Mukherjee, Souradip Roy 16/02/2016
+        Rahul Gautam(59), Aniruddha Mukherjee(56), Souradip Roy(54) 26/02/2016
         Software engineering Sec 1 
         
 		make a histogram of the data stored in the array. In order to do that we can consider 16 bins equally dividing the integer ranges. Write 			a thread program to print the distribution of data.
