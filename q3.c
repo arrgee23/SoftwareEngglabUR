@@ -59,7 +59,7 @@ int main(int argc, char const *argv[]){
         int NUM_THREADS;
         //scanf("%d",&NUM_THREADS);
 		NUM_THREADS = atoi (argv[1]);
-        
+        srand(time(NULL));
 
         // initialize counts array 
         int j=0;
@@ -80,7 +80,7 @@ int main(int argc, char const *argv[]){
 
         //printf("character Set: ");
         for(j=0;j<SIZE;j++){
-                char randomletter = "abcdefghijklmnopqrstuvwxyz"[random () % 26];
+                char randomletter = "abcdefghijklmnopqrstuvwxyz"[rand() % 26];
                 array[j] = randomletter;
         }
 
@@ -116,13 +116,13 @@ int main(int argc, char const *argv[]){
 
         gettimeofday(&end, NULL);
         printf("Microseconds: %ld for %d threads\n", ((end.tv_sec * 1000000 + end.tv_usec)- (start.tv_sec * 1000000 + start.tv_usec)),NUM_THREADS);
-        /*
+        
         printf("a: %ld\n",counts['a']);
         printf("e: %ld\n",counts['e']);
         printf("i: %ld\n",counts['i']);
         printf("o: %ld\n",counts['o']);
         printf("u: %ld\n",counts['u']);
-        */
+        
         return 0;
 }
 
