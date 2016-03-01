@@ -61,6 +61,10 @@ int main(int argc, char const *argv[]){
 		NUM_THREADS = atoi (argv[1]);
         srand(time(NULL));
 
+        // set max num thread to 5
+        if(NUM_THREADS>5)
+        	NUM_THREADS=5;
+
         // initialize counts array 
         int j=0;
         for (j = 0; j < ALPHABET_SIZE; ++j)

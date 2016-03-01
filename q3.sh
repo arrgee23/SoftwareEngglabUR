@@ -3,7 +3,7 @@ compile="gcc q3.c -lpthread -o vowel"
 eval $compile
 
 size=100000000
-for thread in 1 2 4 8 16 32
+for thread in 1 2 3 4 5
 do
 	run="./vowel $thread"
 	eval $run &
