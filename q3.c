@@ -59,8 +59,10 @@ void *countVowel(void* c){
 int main(int argc, char const *argv[]){
         int NUM_THREADS;
         //scanf("%d",&NUM_THREADS);
-		NUM_THREADS = atoi (argv[1]);
-        
+	NUM_THREADS = atoi (argv[1]);
+        // set max num thread to 5
+        if(NUM_THREADS>5)
+        	NUM_THREADS=5;
 
         // initialize counts array 
         int j=0;
